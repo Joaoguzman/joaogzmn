@@ -1,0 +1,103 @@
+TEMA 1: SETUP
+
+(terminal)django-admin startproject joaogzmn
+(terminal)cd joaogzmn
+(terminal)django-admin startapp base
+
+(app_principal = joaogzmn, settings, installed_apps) se agrega 'base.apps.BaseConfig',
+(app_base = base, views) Se importa from django.http import HttpResponse
+(app_base = base, views) Se crean las views: 
+def home(request):
+    return HttpResponse('<h2>Home</h2>')
+def posts(request):
+    return HttpResponse('<h2>Posts</h2>')
+def post(request):
+    return HttpResponse('<h2>Post title</h2>')
+def profile(request):
+    return HttpResponse('<h2>Profile</h2>')
+(app_base = base) Se crea un archivo urls.py
+Se importa from django.urls import path
+Se importa from . import views
+se define una variable
+urlpatterns = [
+    path('', views.home, name='home'),
+    path('posts/', views.posts, name='posts'),
+    path('post/', views.post, name='post'),
+    path('profile/', views.profile, name='profile'),
+]
+
+(app_principal = joaogzmn) En urls.py 
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('base.urls')),
+]
+
+
+TEMA 2: TEMPLATES & TEMPLATE INHERITING
+
+(app_base = base) Se crea una carpeta dentro de la app_base llamada templates. 
+Dentro de la carpeta templates (en la app_base), se crea una carpeta llamada base. 
+Dentro de la carpeta base/templates/base se crean archivos home.html, posts.html, post.html, profile.html. 
+
+**Ahora se corrigen las views creadas en views.py de la app base. 
+**Ya no queremos retornar la función HttpResponse.
+**Ahora queremos retornar render(request, 'base/home.html') segun corresponda la pagina. 
+**Va directamente a la carpeta template porque asi se define. 
+
+Se crea un archivo main.html en base/templates/base
+
+
+Comandos especiales: 
+
+*Encapsula contenido
+{% block content %}
+{% endblock content %}
+
+*Integra contenido de otro archivo.
+{% include 'path'%}
+
+*La ruta que se extiende corresponde a la plantilla. 
+{% extends 'path' %}
+
+main es como una especie de plantilla donde van los elementos que se repetiran en las otras páginas que extienden de ella.
+
+TEMA 3: STATIC FILES
+
+Se crea una carpeta dentro del proyecto (fuera de las apps) llamada static. Dentro se crea la carpeta images y css.
+En settings de la app joaogzmn se edita: 
+STATIC_URL (por defecto debe venir correcto), MEDIA_URL Y STATICFILES_DIRS.
+**Verificar que se importe os al comienzo del script.
+
+STATIC_URL = '/static/'
+MEDIA_URL = '/images/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+(TERMINAL) Se escribe python manage.py collectstatic 
+Este comando copia estaticos a la carpeta staticfiles. 
+Tambien crea la carpeta staticfiles y dentro cuatro carpetas: css, fonts, img, js.
+
+En settings se edita la variable DEBUG. Por defecto indica True, se cambia a False. (CREO QUE ES PARA NO MOSTRAR PAGINAS PRIVADAS).
+
+(en app joaogzmn (principal), urls.py) Se importa:
+
+from django.conf.urls.static import static
+from django.conf import settings
+
+Debajo de la primera definicion de la variable urlpatterns, se escribe:
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+Se instala whitenoise: pip install whitenoise
+Acto seguido se copia: 
+'whitenoise.middleware.WhiteNoiseMiddleware',
+dentro de MIDDLEWARE = []
+

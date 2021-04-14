@@ -1,48 +1,20 @@
 <!DOCTYPE html>
-{% load static %}
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joao Guzmán Gutiérrez</title>
-    <link rel="stylesheet" type="text/css" href={% static 'css/style.css' %}>   
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
-    <!--FAVICON-->
-    <link rel="apple-touch-icon" sizes="57x57" href={% static "/favicon/apple-icon-57x57.png"  %}>
-<link rel="apple-touch-icon" sizes="60x60" href={% static "/favicon/apple-icon-60x60.png"  %}>
-<link rel="apple-touch-icon" sizes="72x72" href={% static "/favicon/apple-icon-72x72.png"  %}>
-<link rel="apple-touch-icon" sizes="76x76" href={% static "/favicon/apple-icon-76x76.png"  %}>
-<link rel="apple-touch-icon" sizes="114x114" href={% static "/favicon/apple-icon-114x114.png"  %}>
-<link rel="apple-touch-icon" sizes="120x120" href={% static "/favicon/apple-icon-120x120.png"  %}>
-<link rel="apple-touch-icon" sizes="144x144" href={% static "/favicon/apple-icon-144x144.png"  %}>
-<link rel="apple-touch-icon" sizes="152x152" href={% static "/favicon/apple-icon-152x152.png"  %}>
-<link rel="apple-touch-icon" sizes="180x180" href={% static "/favicon/apple-icon-180x180.png"  %}>
-<link rel="icon" type="image/png" sizes="192x192"  href={% static "/favicon/android-icon-192x192.png"  %}>
-<link rel="icon" type="image/png" sizes="32x32" href={% static "/favicon/favicon-32x32.png" %}>
-<link rel="icon" type="image/png" sizes="96x96" href={% static "/favicon/favicon-96x96.png" %}>
-<link rel="icon" type="image/png" sizes="16x16" href={% static "/favicon/favicon-16x16.png" %}>
-<link rel="manifest" href={% static "/favicon/manifest.json" %}>
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content={% static "favicon/ms-icon-144x144.png" %}>
-<meta name="theme-color" content="#ffffff">
+    <title>Joao Guzmán</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
- <!--    {% include 'base/navbar.html' %}
--->
-
-    {% block content %}
-    <!--Content goes here-->
-        <!--NavBar Left-->
+    <!--NavBar Left-->
 <!-- Side navigation -->
 <div class="sidenav">
     <a href="#">Acerca de mí</a>
     <a href="#">I+D</a>
     <a href="#">Post y opinión</a>
     <a href="#">Contacto</a>
-    <a href="#"> <span id="cv" style="font-size: 70%;"> Curriculum<br>Vitae </span></a>
-
   </div>
   <!--End NavBar Left-->
 
@@ -57,26 +29,22 @@
         </div>
     </section>
     <section class="s2">
-        
         <div class="main-container">
-            <h1 class='mainText'><span class="number">01.</span> Acerca de mí</h1>
-        </div>
-    <div id="block_acercade">
-        <div class="secondaryText" id="acercademi">
+            <h3></h3>
+            <h1 class='mainText'><span>01.</span> Acerca de mí</h1>
+            <div class="secondaryText" id="acercademi">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum in nunc ut pretium. Mauris posuere tellus id ex blandit lobortis. Proin vestibulum neque turpis, in porttitor orci commodo imperdiet. Praesent in vehicula dui. Aliquam sagittis ante a justo auctor suscipit.
             </p>
             <p>Fusce fringilla augue sed mi bibendum, eget laoreet nunc interdum. Morbi eleifend libero nec diam maximus, nec euismod lectus malesuada. Mauris efficitur venenatis sem ac dignissim. Maecenas ut ligula sed ex elementum pellentesque. Nulla ultrices sapien eget ligula aliquam, non ornare sapien aliquet.
             </p>
         </div>
-        <div id="foto_perfil">
-            <img src="{% static 'images/perfil.jpg' %}">
         </div>
-    </div>
     </section>
 
     <section class="s3">
         <div class="main-container">
-            <h1 class='mainText'><span class="number">02.</span> Investigación y desarrollo</h1>
+            <h3></h3>
+            <h1 class='mainText'><span>02.</span> Investigación y desarrollo</h1>
             <div class="secondaryText">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum in nunc ut pretium. Mauris posuere tellus id ex blandit lobortis. Proin vestibulum neque turpis, in porttitor orci commodo imperdiet. Praesent in vehicula dui. Aliquam sagittis ante a justo auctor suscipit. Nulla facilisi. Donec vitae nisi laoreet, tincidunt felis vel, sagittis libero. Ut non est sed nisi varius imperdiet quis non nisi. Suspendisse dictum, purus sed consectetur consequat, dui est dapibus odio, eu venenatis risus nisl at nulla. Curabitur eleifend libero vel commodo blandit. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut scelerisque, ligula at lacinia blandit, lacus mauris tristique lorem, blandit vehicula nulla enim in velit. Ut mi tortor, luctus id nisl quis, scelerisque rhoncus urna. Donec vitae faucibus lacus. Sed dui purus, malesuada vel hendrerit non, placerat vitae mauris.
                 </p>
@@ -89,7 +57,8 @@
 
     <section class="s4">
         <div class="main-container">
-            <h1 class='mainText'> <span class="number">03.</span> Divagaciones y columnas de opinión</h1>
+            <h3></h3>
+            <h1 class='mainText'> <span>03.</span> Divagaciones y columnas de opinión</h1>
             <div class="secondaryText">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum in nunc ut pretium. Mauris posuere tellus id ex blandit lobortis. Proin vestibulum neque turpis, in porttitor orci commodo imperdiet. Praesent in vehicula dui. Aliquam sagittis ante a justo auctor suscipit. Nulla facilisi. Donec vitae nisi laoreet, tincidunt felis vel, sagittis libero. Ut non est sed nisi varius imperdiet quis non nisi. Suspendisse dictum, purus sed consectetur consequat, dui est dapibus odio, eu venenatis risus nisl at nulla. Curabitur eleifend libero vel commodo blandit. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut scelerisque, ligula at lacinia blandit, lacus mauris tristique lorem, blandit vehicula nulla enim in velit. Ut mi tortor, luctus id nisl quis, scelerisque rhoncus urna. Donec vitae faucibus lacus. Sed dui purus, malesuada vel hendrerit non, placerat vitae mauris.
                 </p>
@@ -101,7 +70,8 @@
 
     <section class="s5">
         <div class="main-container">
-            <h1 class='mainText'> <span class="number">04.</span> Contacto</h1>
+            <h3></h3>
+            <h1 class='mainText'> <span>04.</span> Contacto</h1>
             <a href=""></a>
 			<form id="contact-form">
 				<a name="contact"></a>
@@ -118,7 +88,7 @@
 				<label>Mensaje</label>
 				<textarea class="input-field" name="message"></textarea>
 
-				<input id="submit-btn" type="submit" value="Enviar">
+				<input id="submit-btn" type="submit" value="Send">
 			</form>
         </div>
     </section>
@@ -142,12 +112,9 @@
 </ul>
 
 			  </nav>
-			  <p> <span> Sitio en construcción. </span></p> 
+			  <p>Sitio en construcción.</p> 
 	</footer>
 </div>
 <!--End main content-->
-    {% endblock content %}
-
-
 </body>
 </html>
