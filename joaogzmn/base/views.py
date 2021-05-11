@@ -7,8 +7,8 @@ def home(request):
 def posts(request):
     return render(request, 'base/posts.html')
 
-def post(request):
-    return render(request, 'base/post.html')
+def researchandopinion(request):
+    return render(request, 'base/research&opinion.html')
     
 def profile(request):
     return render(request, 'base/profile.html')
