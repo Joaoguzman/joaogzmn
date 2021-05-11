@@ -4,11 +4,17 @@ from django.http import HttpResponse
 def home(request):
     return render(request, 'base/home.html')
 
-def posts(request):
-    return render(request, 'base/posts.html')
+def backend(request):
+    return render(request, 'base/backend.html')
 
 def researchandopinion(request):
     return render(request, 'base/research&opinion.html')
     
-def profile(request):
-    return render(request, 'base/profile.html')
+def spatial_datascience(request):
+    return render(request, 'base/spatial_datascience.html')
+
+def devops(request):
+    return render(request, 'base/devops.html')
+
+def contact(request):
+    return render(request, 'base/contact.html')
