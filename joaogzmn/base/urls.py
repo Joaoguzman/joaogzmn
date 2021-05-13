@@ -5,8 +5,8 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('backend/', views.backend, name='backend'),
     path('researchopinion/', views.researchopinion, name='researchopinion'),
-    path('spatial_datascience/', views.spatial_datascience, name='spatial_datascience'),
-    path('devops/', views.devops, name='devops'),
+    path('machinelearning/', views.machinelearning, name='machinelearning'),
+    path('representationlearning/', views.representationlearning, name='representationlearning'),
     path('contact/', views.contact, name='contact'),
 
 ]

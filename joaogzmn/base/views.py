@@ -10,11 +10,11 @@ def backend(request):
 def researchopinion(request):
     return render(request, 'base/researchopinion.html')
     
-def spatial_datascience(request):
-    return render(request, 'base/spatial_datascience.html')
+def machinelearning(request):
+    return render(request, 'base/machinelearning.html')
 
-def devops(request):
-    return render(request, 'base/devops.html')
+def representationlearning(request):
+    return render(request, 'base/representationlearning.html')
 
 def contact(request):
     return render(request, 'base/contact.html')
