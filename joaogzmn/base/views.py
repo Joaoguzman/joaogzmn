@@ -7,8 +7,8 @@ def home(request):
 def backend(request):
     return render(request, 'base/backend.html')
 
-def researchandopinion(request):
-    return render(request, 'base/research&opinion.html')
+def researchopinion(request):
+    return render(request, 'base/researchopinion.html')
     
 def spatial_datascience(request):
     return render(request, 'base/spatial_datascience.html')
