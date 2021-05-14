@@ -1,0 +1,18 @@
+:root {
+    --remarkable: #64ffda;
+    --background_color: #112240;
+    --nav_background_color: red;
+    --titles: #a8b2d1;
+    --text: #8892b0;
+}
+
+body, div, section { background-color: var(--background_color); }
+:is(h1, h2, h4, h5, h6) { color: var(--titles); }
+h3 { color: var(--remarkable); }
+p { color: var(--text); }
+a { color: var(--text); }
+#foot1 { background-color: var(--background_color); } 
+#foot2 { background-color: var(--background_color); } 
+#foot3 { background-color: var(--background_color); } 
+#id_message { color: var(--text); }
+.text { color: var(--text); }
